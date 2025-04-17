@@ -1,11 +1,26 @@
-
 #root {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: left;
-  background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   min-height: 100vh;
+}
+
+/* Modern card styles */
+.modern-card {
+  @apply bg-white/70 backdrop-blur-sm border border-gray-100 rounded-xl shadow-sm 
+  transition-all duration-300 hover:shadow-md hover:bg-white/80;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-dashboard-blue to-purple-600 bg-clip-text text-transparent;
+}
+
+/* Glass effect */
+.glass-effect {
+  @apply bg-white/70 backdrop-blur-md border border-gray-100;
 }
 
 /* For mobile devices */
@@ -30,14 +45,14 @@
   }
 }
 
-/* Add smooth transitions */
+/* Enhanced transitions */
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  transition-duration: 200ms;
 }
 
-/* Add smooth animations */
+/* Modern animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -50,5 +65,24 @@
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.3s ease-out forwards;
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }

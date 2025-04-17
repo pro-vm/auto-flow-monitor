@@ -10,12 +10,12 @@ const Index = () => {
   const lastUpdated = '27 Mar 06:12 PM';
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/10 to-indigo-50/10">
       <DashboardHeader lastUpdated={lastUpdated} />
       <DashboardTabs activeTab={activeTab} onTabChange={setActiveTab} />
       
-      <div className="flex-1 container mx-auto max-w-7xl px-4 py-6">
-        <div className="bg-white/40 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div className="flex-1 container mx-auto max-w-7xl px-4 py-6 animate-fade-in">
+        <div className="glass-effect rounded-2xl shadow-sm overflow-hidden">
           {activeTab === 'delivery' ? (
             <DeliveryDashboard />
           ) : (
