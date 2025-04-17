@@ -12,12 +12,23 @@ const CountCard: React.FC<CountCardProps> = ({
   title, 
   count, 
   icon,
-  textColor = "text-dashboard-blue" 
+  textColor = "text-indigo-600"
 }) => {
   return (
-    <div className="bg-white rounded-sm shadow-sm flex flex-col items-center p-3 border">
-      <div className="text-sm text-gray-600">{title}</div>
-      <div className={`text-xl font-bold ${textColor}`}>{count.toLocaleString()}</div>
+    <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-indigo-100/50 hover:shadow-xl transition-all duration-300 p-4">
+      <div className="flex items-center gap-3">
+        {icon && (
+          <div className="p-2 bg-indigo-100 rounded-lg">
+            {icon}
+          </div>
+        )}
+        <div>
+          <div className="text-sm text-gray-600 font-medium">{title}</div>
+          <div className={`text-xl font-bold ${textColor}`}>
+            {count.toLocaleString()}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

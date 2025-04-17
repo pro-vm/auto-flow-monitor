@@ -1,43 +1,43 @@
+
 #root {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: left;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
 /* Modern card styles */
 .modern-card {
-  @apply bg-white/70 backdrop-blur-sm border border-gray-100 rounded-xl shadow-sm 
-  transition-all duration-300 hover:shadow-md hover:bg-white/80;
+  @apply bg-white/80 backdrop-blur-sm border border-indigo-100/50 rounded-xl shadow-lg 
+  transition-all duration-300 hover:shadow-xl hover:bg-white/90;
 }
 
 /* Gradient text */
 .gradient-text {
-  @apply bg-gradient-to-r from-dashboard-blue to-purple-600 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent;
 }
 
 /* Glass effect */
 .glass-effect {
-  @apply bg-white/70 backdrop-blur-md border border-gray-100;
+  @apply bg-white/70 backdrop-blur-md border border-indigo-100/50;
 }
 
-/* For mobile devices */
+/* Responsive design */
 @media (max-width: 768px) {
   .grid-cols-5 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .grid-cols-3 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* For even smaller devices */
 @media (max-width: 480px) {
   .grid-cols-5 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .grid-cols-2 {
@@ -49,14 +49,14 @@
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
+  transition-duration: 300ms;
 }
 
 /* Modern animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -65,7 +65,7 @@
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.4s ease-out forwards;
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
 /* Modern scrollbar */
@@ -79,10 +79,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #818cf8;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #6366f1;
 }
