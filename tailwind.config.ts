@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Dashboard custom colors
+				'dashboard-blue': '#1a73e8',
+				'dashboard-red': '#e53935',
+				'dashboard-green': '#34a853',
+				'dashboard-yellow': '#fbbc04',
+				'dashboard-lmd': '#4285f4',
+				'dashboard-hd': '#34a853',
+				'dashboard-bpl': '#e53935',
+				'dashboard-ip': '#fbbc04',
+				'dashboard-light-bg': '#f5f7fa',
+				'dashboard-header': '#e6effe',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
