@@ -9,13 +9,13 @@ interface DashboardTabsProps {
 
 const DashboardTabs: React.FC<DashboardTabsProps> = ({ activeTab, onTabChange }) => {
   return (
-    <div className="w-full px-4 py-2 flex border-b">
+    <div className="w-full px-6 py-3 flex gap-4 border-b bg-white/50 backdrop-blur-sm">
       <button 
         className={cn(
-          "py-2 px-4 font-medium text-sm",
+          "py-2 px-6 font-medium text-sm rounded-full transition-all duration-200",
           activeTab === 'rollout' 
-            ? "text-dashboard-red border-b-2 border-dashboard-red" 
-            : "text-gray-500"
+            ? "bg-dashboard-blue text-white shadow-md shadow-dashboard-blue/20" 
+            : "text-gray-500 hover:bg-gray-100"
         )}
         onClick={() => onTabChange('rollout')}
       >
@@ -23,10 +23,10 @@ const DashboardTabs: React.FC<DashboardTabsProps> = ({ activeTab, onTabChange })
       </button>
       <button 
         className={cn(
-          "py-2 px-4 font-medium text-sm",
+          "py-2 px-6 font-medium text-sm rounded-full transition-all duration-200",
           activeTab === 'delivery' 
-            ? "text-dashboard-red border-b-2 border-dashboard-red" 
-            : "text-gray-500"
+            ? "bg-dashboard-blue text-white shadow-md shadow-dashboard-blue/20" 
+            : "text-gray-500 hover:bg-gray-100"
         )}
         onClick={() => onTabChange('delivery')}
       >

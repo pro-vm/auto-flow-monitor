@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { LayoutDashboard, ListFilter } from 'lucide-react';
 
 interface ViewToggleProps {
   activeView: string;
@@ -9,27 +10,29 @@ interface ViewToggleProps {
 
 const ViewToggle: React.FC<ViewToggleProps> = ({ activeView, onViewChange }) => {
   return (
-    <div className="w-full flex px-4 py-2 bg-gray-100">
+    <div className="w-full flex px-6 py-3 bg-white/50 backdrop-blur-sm">
       <button 
         className={cn(
-          "py-1 px-6 text-sm rounded-sm",
+          "py-2 px-6 text-sm rounded-l-lg flex items-center gap-2 transition-all duration-200",
           activeView === 'overview' 
-            ? "bg-gray-700 text-white" 
-            : "bg-gray-300 text-gray-700"
+            ? "bg-gray-900 text-white" 
+            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
         )}
         onClick={() => onViewChange('overview')}
       >
+        <LayoutDashboard size={16} />
         Overview
       </button>
       <button 
         className={cn(
-          "py-1 px-6 text-sm rounded-sm ml-2",
+          "py-2 px-6 text-sm rounded-r-lg flex items-center gap-2 transition-all duration-200",
           activeView === 'detailed' 
-            ? "bg-gray-700 text-white" 
-            : "bg-gray-300 text-gray-700"
+            ? "bg-gray-900 text-white" 
+            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
         )}
         onClick={() => onViewChange('detailed')}
       >
+        <ListFilter size={16} />
         Detailed
       </button>
     </div>
